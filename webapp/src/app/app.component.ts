@@ -17,8 +17,8 @@ export class AppComponent implements OnDestroy {
     });
   }
 
-  public unsafePublish(topic: string = 'my/topic', message: string = 'Cool'): void {
-    this.mqttService.unsafePublish(topic, message, { qos: 1, retain: true });
+  public unsafePublish(topic: string = 'my/topic', message: string = ''): void {
+    this.mqttService.unsafePublish(topic, message, { qos: 1, retain: false });
   }
 
   public ngOnDestroy() {

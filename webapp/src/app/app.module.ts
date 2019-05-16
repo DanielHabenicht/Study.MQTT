@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { IMqttServiceOptions, MqttModule } from 'ngx-mqtt';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +14,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, MqttModule.forRoot(MQTT_SERVICE_OPTIONS)],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule, MqttModule.forRoot(MQTT_SERVICE_OPTIONS)],
   providers: [],
   bootstrap: [AppComponent]
 })
