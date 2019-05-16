@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  webapp:
+    build:
+      context: ./rabbitmq/
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+      - 1883:1883
+      - 15670:15670
+    container_name: some-rabbit
+    hostname: localhost
