@@ -8,16 +8,16 @@
   </mat-form-field>
   <mat-form-field>
 
-    <input matInput placeholder="Topic" type="text" #topic>
+    <input matInput placeholder="Topic" type="text" value="my/topic" #topic>
   </mat-form-field>
-  <button (click)="unsafePublish(topic.value, input.value)">Message!</button>
+  <button mat-raised-button (click)="unsafePublish(topic.value, input.value)">Message!</button>
 </div>
 <div>
   <h2>Subscribe to topic</h2>
   <mat-form-field>
     <input matInput placeholder="Topic" type="text" #subscribeTopic>
   </mat-form-field>
-  <button (click)="addTopic(subscribeTopic.value)">Observe Topic</button>
+  <button mat-raised-button (click)="addTopic(subscribeTopic.value)">Observe Topic</button>
 </div>
 
 <mat-accordion>
