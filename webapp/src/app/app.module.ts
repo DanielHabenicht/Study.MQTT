@@ -8,9 +8,10 @@ import { MaterialModule } from 'src/app/material-module/material-module.module';
 import { SubscriptionModule } from 'src/app/subscription/subscription.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { environment } from 'src/environments/environment';
 
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-  hostname: 'localhost',
+  hostname: environment.mqttUrl,
   port: 15670,
   path: '/ws'
 };
