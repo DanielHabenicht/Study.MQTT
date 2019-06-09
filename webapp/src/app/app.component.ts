@@ -9,15 +9,25 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnDestroy {
   private subscription: Subscription;
-  public topics: string[] = ['my/topic'];
+  public topics: string[] = ['test'];
 
   constructor(private mqttService: MqttService) {}
 
   addTopic(topic: string) {
+    if (!topic || this.topics.includes(topic)) {
+      return;
+    }
     this.topics.push(topic);
   }
 
-  public unsafePublish(topic: string = 'my/topic', message: string = ''): void {
+  removeTopic(topic: string) {
+    this.topics = this.topics.filter(t => t != topic);
+  }
+
+  public unsafePublish(topic: string, message: string = ''): void {
+    if (!topic || !message) {
+      return;
+    }
     this.mqttService.unsafePublish(topic, message, { qos: 1 });
   }
 
@@ -27,6 +37,5 @@ export class AppComponent implements OnDestroy {
 }
 
 export interface Message {
-  topic: string;
   message: string;
 }

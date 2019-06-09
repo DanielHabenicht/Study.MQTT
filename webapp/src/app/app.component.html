@@ -1,33 +1,57 @@
-<div>
-  <h1>
-    Send Message
+<h1>MQTT Sample</h1>
 
-  </h1>
-  <mat-form-field>
-    <input matInput placeholder="Message" type="text" #input>
-  </mat-form-field>
-  <mat-form-field>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Send Message
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="Topic" type="text" value="test" #topic>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Message" type="text" #input></textarea>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="right">
+    <button mat-raised-button (click)="unsafePublish(topic.value, input.value)">Send Message!</button>
+  </mat-card-actions>
+</mat-card>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Subscribe to topic
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput placeholder="Topic" type="text" #subscribeTopic>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions align="right">
+    <button mat-raised-button (click)="addTopic(subscribeTopic.value)">Observe Topic</button>
+  </mat-card-actions>
+</mat-card>
 
-    <input matInput placeholder="Topic" type="text" #topic>
-  </mat-form-field>
-  <button (click)="unsafePublish(topic.value, input.value)">Message!</button>
-</div>
-<div>
-  <h2>Subscribe to topic</h2>
-  <mat-form-field>
-    <input matInput placeholder="Topic" type="text" #subscribeTopic>
-  </mat-form-field>
-  <button (click)="addTopic(subscribeTopic.value)">Observe Topic</button>
-</div>
-
-<mat-accordion>
+<h3>Topics subscribed:</h3>
+<mat-accordion multi="true">
   <mat-expansion-panel *ngFor="let topic of topics">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{topic}}
+        <span style="align-self: center;">
+          {{topic}}
+        </span>
       </mat-panel-title>
+      <mat-panel-description>
+        <button mat-button (click)="removeTopic(topic)">Remove</button>
+      </mat-panel-description>
     </mat-expansion-panel-header>
-    <app-subscription [topic]="topic"></app-subscription>
+    <ng-template matExpansionPanelContent>
+      <app-subscription [topic]="topic"></app-subscription>
+    </ng-template>
   </mat-expansion-panel>
 </mat-accordion>
 

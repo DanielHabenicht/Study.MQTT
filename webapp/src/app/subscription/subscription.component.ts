@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
 import { Subscription } from 'rxjs';
 import { Message } from 'src/app/app.component';
+import { Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-subscription',
@@ -19,10 +21,14 @@ export class SubscriptionComponent implements OnInit {
 
   public observeTopic() {
     this.subscription = this.mqttService.observe(this.topic).subscribe((message: IMqttMessage) => {
-      this.messages.push({ topic: this.topic, message: message.payload.toString() });
+      this.messages.push({ message: message.payload.toString() });
     });
   }
   ngOnInit() {
     this.observeTopic();
+  }
+
+  public clear() {
+    this.messages = [];
   }
 }

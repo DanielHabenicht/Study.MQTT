@@ -6,7 +6,7 @@ import { EnvironemtModel } from './environment.model';
 
 export const environment: EnvironemtModel = {
   production: false,
-  mqttUrl: 'localhost'
+  mqttUrl: 'rabbitmq.northeurope.azurecontainer.io'
 };
 
 /*

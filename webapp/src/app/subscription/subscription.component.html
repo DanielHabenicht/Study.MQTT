@@ -1,4 +1,5 @@
 Messages of Topic: {{topic}}
+<button mat-button (click)="clear()">Clear</button>
 <ul>
-  <li *ngFor="let item of messages">[{{item.topic}}]{{item.message}}</li>
+  <li *ngFor="let item of messages">{{item.message}}</li>
 </ul>
