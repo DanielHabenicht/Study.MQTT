@@ -4386,9 +4386,10 @@ mqtt-packet@^6.0.0:
     process-nextick-args "^2.0.0"
     safe-buffer "^5.1.2"
 
-"mqtt@github:mqttjs/MQTT.js#62641d6ec22e4e51b1cacd3f692965d44a09d03e":
-  version "2.18.8"
-  resolved "https://codeload.github.com/mqttjs/MQTT.js/tar.gz/62641d6ec22e4e51b1cacd3f692965d44a09d03e"
+mqtt@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mqtt/-/mqtt-3.0.0.tgz#7961e5f61efba3eec37d5aa9c4cbcdeb6f841380"
+  integrity sha512-0nKV6MAc1ibKZwaZQUTb3iIdT4NVpj541BsYrqrGBcQdQ7Jd0MnZD1/6/nj1UFdGTboK9ZEUXvkCu2nPCugHFA==
   dependencies:
     base64-js "^1.3.0"
     commist "^1.0.0"
@@ -4480,14 +4481,14 @@ next-tick@^1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-ngx-mqtt@6.9.0:
-  version "6.9.0"
-  resolved "https://registry.yarnpkg.com/ngx-mqtt/-/ngx-mqtt-6.9.0.tgz#8b4ac174eafce141c53dc91ce11fc1a2dbe9c7e4"
-  integrity sha512-m90ZiY3cHlSnfO3fCuecqRCZ9BgBJzDnPQxvpt/4Wx0wSN2CvxK7nlTQC5FcuUT4bM5oBeS2WPZCF4wN6UpXBA==
+ngx-mqtt@6.10.0:
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/ngx-mqtt/-/ngx-mqtt-6.10.0.tgz#129a9d2b9b09152ce58aca97a126f6349e39598b"
+  integrity sha512-n6m15EjdfZ8Lk4GQxxeez7TPD9rzg+zQUJ8Fu4cO7MDox5Qj+nqE2xoVQ6P8w+hHyB0vrbI4KRhlABD2q35FQQ==
   dependencies:
     "@types/node" "10.3.2"
     ecstatic ">=3.2.0"
-    mqtt "github:mqttjs/MQTT.js#62641d6ec22e4e51b1cacd3f692965d44a09d03e"
+    mqtt "^3.0.0"
     ssri ">=6.0.0"
 
 nice-try@^1.0.4:
