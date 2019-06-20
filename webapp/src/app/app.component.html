@@ -49,9 +49,7 @@
         <button mat-button (click)="removeTopic(topic)">Remove</button>
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <ng-template matExpansionPanelContent>
-      <app-subscription [topic]="topic"></app-subscription>
-    </ng-template>
+    <app-subscription [topic]="topic"></app-subscription>
   </mat-expansion-panel>
 </mat-accordion>
 
