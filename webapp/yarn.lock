@@ -4449,10 +4449,10 @@ next-tick@^1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-ngx-mqtt@6.10.0:
-  version "6.10.0"
-  resolved "https://registry.yarnpkg.com/ngx-mqtt/-/ngx-mqtt-6.10.0.tgz#129a9d2b9b09152ce58aca97a126f6349e39598b"
-  integrity sha512-n6m15EjdfZ8Lk4GQxxeez7TPD9rzg+zQUJ8Fu4cO7MDox5Qj+nqE2xoVQ6P8w+hHyB0vrbI4KRhlABD2q35FQQ==
+ngx-mqtt@6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/ngx-mqtt/-/ngx-mqtt-6.11.0.tgz#d86363edd5f82f3cddc53312572371e721adfafe"
+  integrity sha512-5goef1NqvmrlO1XHj2Vv3PK+1GeQtn/+nFnAJ/TaSoJ/qE1wtICqTRkngsfHzHBzO0+skU7TXY0Dl5BwamygLw==
   dependencies:
     "@types/node" "10.3.2"
     ecstatic ">=3.2.0"
